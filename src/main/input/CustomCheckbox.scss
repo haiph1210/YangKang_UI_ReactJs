@@ -1,0 +1,20 @@
+.checkbox-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  
+  .checkbox-button.checked {
+    background-color: #4caf50;
+    color: #fff;
+    border-color: #4caf50;
+  }
+  
+  .checkbox-button input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  

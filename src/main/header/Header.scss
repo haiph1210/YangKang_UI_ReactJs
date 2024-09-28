@@ -1,0 +1,18 @@
+
+@media (max-width: 576px) {
+    .hide-show {
+        display: none;
+    }
+}
+.icon-cart{
+    position: relative;
+    color: red;
+
+
+    .total-cart{
+        position: absolute;
+        top:-6px;
+        color: red;
+        left: 16px;
+    }
+}

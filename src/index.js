@@ -3,10 +3,21 @@ import './index.css';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-bootstrap';
+import 'react-toastify/dist/ReactToastify.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import { BrowserRouter } from 'react-router-dom';
+import Stores from './redux/Stores';
+import { Provider } from 'react-redux';
 ReactDOM.render(
+  
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+    <Provider store={Stores}>
+      <App />
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

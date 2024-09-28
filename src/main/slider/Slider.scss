@@ -1,0 +1,161 @@
+// body {
+//     box-sizing: border-box;
+//     margin: 0;
+//     padding: 0;
+// }
+// .full{
+//     position: relative;
+// }
+// .header {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     z-index: 100;
+//     /* Đặt z-index lớn hơn z-index của slider để header hiển thị trên slider */
+// }
+
+// .slider-container {
+//     display: flex;
+//     margin-top: 50px;
+//     position: relative;
+// }
+
+// .slider {
+//     margin-top: 66px;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     bottom: 0;
+//     width: 200px;
+//     z-index: 100;
+//     border: 1px solid #ccc;
+//     background-color: #f5f5f5;
+
+//     .fix-lenght {
+//         width: 100%;
+//     }
+// }
+
+// .main {
+//     position: absolute;
+//     left: 200px;
+//     top: 16px;
+//     background-color: #ffffff;
+//     width: calc(100% - 200px);
+//     /* Giảm chiều rộng để làm cách đặt khi ẩn slider */
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+// .centered {
+//     position: absolute;
+//     top: 16px;
+//     left: 0;
+//     right: 0;
+//     margin: 0 auto;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+// @media (max-width: 576px) {
+//     .slider {
+//         display: none;
+//     }
+
+//     .main {
+//         margin-left: 0;
+//         /* Xóa khoảng cách bên trái khi ẩn slider */
+//         width: 100%;
+//         /* Khôi phục chiều rộng khi ẩn slider */
+//     }
+// }
+// .content {
+//     min-height: calc(100vh - 50px); /* 50px là chiều cao của header */
+//     margin-bottom: 100px; /* 100px là chiều cao của footer */
+//   }
+// .footer {
+//     position: sticky;
+//     bottom: 0;
+//     background-color: #f5f5f5;
+//     padding: 20px;
+//     text-align: center;
+//   }
+
+
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.full {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.slider-container {
+    flex: 1 1 auto;
+    /* Chiếm toàn bộ không gian còn lại */
+    display: flex;
+    background-color: #ffffff;
+    /* Màu nền của slider và main */
+}
+
+.slider {
+    flex: 0 0 200px;
+    /* Chiếm không gian tĩnh */
+    border: 1px solid #ccc;
+    /* Viền của slider */
+    background-color: #f5f5f5;
+    /* Màu nền của slider */
+
+}
+.slider .nav,
+.slider .nav-link {
+  font-size: 20px;
+  color: black;
+}
+.main {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Canh giữa và chia đều các phần tử bên trong */
+    align-items: center;
+    /* Canh giữa các phần tử bên trong */
+}
+.centered {
+    flex: 1 1 auto;
+ 
+}
+.content {
+    margin-top: 16px;
+    /* Khoảng cách từ top của main đến content */
+    padding: 20px;
+    /* Khoảng cách giữa các phần tử bên trong content */
+
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+@media (max-width: 576px) {
+    .slider {
+        display: none;
+    }
+
+    .main {
+        width: 100%;
+    }
+}

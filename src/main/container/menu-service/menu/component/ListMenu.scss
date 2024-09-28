@@ -1,0 +1,22 @@
+body {
+    .handle-row {
+        height: 20rem;
+    }
+
+
+
+
+}
+
+.hanlde-center {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1236px) {
+    .hanlde-1236 {
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+    }
+}
